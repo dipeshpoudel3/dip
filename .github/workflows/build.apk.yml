@@ -23,7 +23,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v5
         with:
           gradle-version: '8.7'
 
@@ -34,7 +34,7 @@ jobs:
             "platforms;android-35" \
             "build-tools;35.0.0"
 
-      - name: Build Debug APK
+      - name: Build APK
         run: gradle assembleDebug
 
       - name: Upload APK
